@@ -10,7 +10,7 @@ Header Responsivo.
 
 3. Após o `gulp default` abrira o webserver automaticamente no navegador, podendo criar/modificar os arquivos html, sass e js, compilando automaticamente com livereload.
 
-- Hospedei a aplicação no GitHub Pages para facilitar o acesso =>
+- Hospedei a aplicação no GitHub Pages para facilitar o acesso => https://lucascs-web.github.io/Moovin-LucasSantos/index.html
 
 - 320px => https://i.imgur.com/qV4mK8k.jpg
 
