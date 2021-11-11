@@ -1,0 +1,477 @@
+// IMPORT MIXINS - FONTS//MEDIA QUERIES //
+@import "mixins";
+// BODY //
+body {
+    // UI //
+    background-color: #f1f1f1;
+    // CONTAINER MAIN //
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    // HEADER //
+    header {
+        // UI //
+        background-color: #ffffff;
+        box-shadow: 0px 4px 8px #0000001f;
+        border-radius: 0px 0px 8px 8px;
+        // SECTION QUICKLINK TOP //
+        section.quicklink-top {
+            // UI //
+            background-color: #f1f1f1;
+            // CONTAINER //
+            .container {
+                display: flex;
+                justify-content: space-between;
+                padding: 8px 0 10px 0;
+                // MEDIA TABLET //
+                @include for-size(tablet) {
+                    position: fixed;
+                    width: 100%;
+                    height: 0;
+                    overflow: hidden;
+                    padding: 0;
+                    top: 0;
+                    flex-direction: column;
+                    justify-content: center;
+                    z-index: 1;
+                    transition: height 0.5s ease-in;
+                    // UI //
+                    background-color: #f1f1f1;
+                }
+                .close-mobile {
+                    position: absolute;
+                    width: 100%;
+                    padding: 20px 0 20px 0;
+                    top: 0;
+                    z-index: 1;
+                    // UI //
+                    background-color: #cccccc;
+                    // UI FONT //
+                    @include typography-2;
+                    color: #999999;
+                    text-align: center;
+                    // MEDIA BIG-DESKTOP //
+                    @include for-size(if-desktop) {
+                        display: none;
+                    }
+                }
+                ul {
+                    display: flex;
+                    // MEDIA TABLET //
+                    @include for-size(tablet) {
+                        flex-direction: column;
+                        align-items: center;
+                        &:nth-child(2) {
+                            padding-top: 60px;
+                            order: 2;
+                        }
+                    }
+                    li {
+                        padding-right: 60px;
+                        // UI FONT //
+                        @include typography-1;
+                        font-size: 0.75em;
+                        letter-spacing: 0.24px;
+                        // MEDIA BIG-DESKTOP //
+                        @include for-size(desktop) {
+                            padding-right: 16px;
+                            // UI FONT //
+                            font-size: 0.7em;
+                        }
+                        // MEDIA TABLET //
+                        @include for-size(tablet) {
+                            padding: 20px;
+                            // UI FONT //
+                            @include typography-3;
+                        }
+                        .fa-phone {
+                            position: relative;
+                            top: 3px;
+                            padding-right: 5px;
+                            // UI //
+                            transform: rotate(45deg);
+                            // UI FONT //
+                            color: #000000;
+                            font-size: 16px;
+                            font-weight: bold;
+                        }
+                        .fa-whatsapp {
+                            position: relative;
+                            top: 1px;
+                            padding-right: 5px;
+                            // UI FONT //
+                            color: #0dbc4f;
+                            font-size: 16px;
+                        }
+                    }
+                    &:nth-child(3) {
+                        li {
+                            // MEDIA IF-DESKTOP //
+                            @include for-size(if-desktop) {
+                                padding-top: 4px;
+                            }
+                            &:last-child {
+                                // MEDIA IF-DESKTOP //
+                                @include for-size(if-desktop) {
+                                    padding-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // CONTAINER MOBILE //
+            .container-mobile {
+                display: none;
+                // MEDIA TABLET //
+                @include for-size(tablet) {
+                    display: block;
+                    width: 80%;
+                    margin: 0 auto;
+                    padding-bottom: 5px;
+                    .hamburguer-menu {
+                        position: relative;
+                        width: 60px;
+                        height: 60px;
+                        margin-left: -12px;
+                        .btn {
+                            position: absolute;
+                            width: 60px;
+                            height: 60px;
+                            cursor: pointer;
+                            .btn-left {
+                                position: absolute;
+                                height: 8px;
+                                width: 15px;
+                                top: 30px;
+                                left: 15px;
+                                -webkit-transition-duration: 0.5s;
+                                transition-duration: 0.5s;
+                                // UI //
+                                background-color: #333;
+                                &:before {
+                                    position: absolute;
+                                    width: 15px;
+                                    height: 8px;
+                                    content: "";
+                                    top: -12px;
+                                    -webkit-transition-duration: 0.5s;
+                                    transition-duration: 0.5s;
+                                    // UI //
+                                    background-color: #333;
+                                }
+                                &:after {
+                                    position: absolute;
+                                    width: 15px;
+                                    height: 8px;
+                                    content: "";
+                                    top: 12px;
+                                    -webkit-transition-duration: 0.5s;
+                                    transition-duration: 0.5s;
+                                    // UI //
+                                    background-color: #333;
+                                }
+                            }
+                            .btn-right {
+                                position: absolute;
+                                height: 8px;
+                                width: 15px;
+                                top: 30px;
+                                left: 30px;
+                                -webkit-transition-duration: 0.5s;
+                                transition-duration: 0.5s;
+                                // UI //
+                                background-color: #333;
+                                &:before {
+                                    position: absolute;
+                                    width: 15px;
+                                    height: 8px;
+                                    content: "";
+                                    top: -12px;
+                                    -webkit-transition-duration: 0.5s;
+                                    transition-duration: 0.5s;
+                                    // UI //
+                                    background-color: #333;
+                                }
+                                &:after {
+                                    position: absolute;
+                                    width: 15px;
+                                    height: 8px;
+                                    content: "";
+                                    top: 12px;
+                                    -webkit-transition-duration: 0.5s;
+                                    transition-duration: 0.5s;
+                                    // UI //
+                                    background-color: #333;
+                                }
+                            }
+                        }
+                        .active {
+                            .btn-left {
+                                -webkit-transition-duration: 0.5s;
+                                transition-duration: 0.5s;
+                                // UI //
+                                background: transparent;
+                                &:before {
+                                    -webkit-transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+                                    transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+                                }
+                                &:after {
+                                    -webkit-transform: rotateZ(-45deg) scaleX(1.4) translate(4px, -4px);
+                                    transform: rotateZ(-45deg) scaleX(1.4) translate(4px, -4px);
+                                }
+                            }
+                            .btn-right {
+                                -webkit-transition-duration: 0.5s;
+                                transition-duration: 0.5s;
+                                // UI //
+                                background: transparent;
+                                &:before {
+                                    -webkit-transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+                                    transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+                                }
+                                &:after {
+                                    -webkit-transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+                                    transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // OPEN QUICKLINK TOP MOBILE //
+            .ul-quicklink-top-mobile {
+                height: 100vh !important;
+                transition: height 0.5s ease-in;
+            }
+        }
+        // SECTION HEADER TOP //
+        section.header-top {
+            // CONTAINER //
+            .container {
+                display: flex;
+                justify-content: space-between;
+                padding: 40px 0 40px 0;
+                // MEDIA TABLET //
+                @include for-size(tablet) {
+                    height: 120px;
+                    padding-top: 10px;
+                }
+                // LOGO //
+                .logo {
+                    width: 130px;
+                    height: 46px;
+                    margin: 6px 25px 0 0;
+                    // UI //
+                    background: url(/assets/img/logo.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    // MEDIA MEDIUM-MOBILE //
+                    @include for-size(medium-mobile) {
+                        width: 95px;
+                        height: 34px;
+                        margin-top: 13px;
+                    }
+                    h1 {
+                        // UI FONT //
+                        font-size: 2em;
+                        color: transparent;
+                    }
+                }
+                // SEARCH //
+                .search {
+                    width: 50%;
+                    height: 50px;
+                    margin: 0 auto;
+                    margin-right: 0;
+                    display: flex;
+                    // UI //
+                    box-shadow: 0px 0px 8px #00000029;
+                    // MEDIA TABLET //
+                    @include for-size(tablet) {
+                        width: 80%;
+                        position: absolute;
+                        top: 150px;
+                    }
+                    input[type="text"] {
+                        width: 82%;
+                        height: 50px;
+                        padding-right: 35px;
+                        padding-left: 20px;
+                        // UI //
+                        background: #ffffff;
+                        border: 2px solid #dfdfdf;
+                        border-radius: 5px;
+                        // UI FONT //
+                        @include typography-1;
+                        font-size: 0.873em;
+                        color: #838282;
+                    }
+                    button[type="submit"] {
+                        width: 18%;
+                        height: 56px;
+                        margin-left: -40px;
+                        // UI //
+                        background: #ffffff;
+                        border-right: 2px solid #dfdfdf;
+                        border-top: 2px solid #dfdfdf;
+                        border-bottom: 2px solid #dfdfdf;
+                        border-radius: 0px 5px 5px 0px;
+                        cursor: pointer;
+                        // UI FONT //
+                        color: #838282;
+                    }
+                }
+                // USER ACCOUNT //
+                .user-account {
+                    cursor: pointer;
+                    position: relative;
+                    width: 100px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0px auto;
+                    padding-top: 6px;
+                    // UI FONT //
+                    @include typography-2;
+                    font-size: 1em;
+                    &:hover {
+                        ul {
+                            // MEDIA IF-DESKTOP //
+                            @include for-size(if-desktop) {
+                                visibility: visible;
+                                opacity: 1;
+                                transition: visibility 0.2s, opacity 0.2s linear;
+                            }
+                        }
+                    }
+                    // MEDIA TABLET //
+                    @include for-size(tablet) {
+                        margin-right: 16px;
+                    }
+                    i {
+                        padding-left: 5px;
+                        // UI FONT //
+                        font-size: 10px;
+                    }
+                    .ul-user-account-mobile {
+                        // MEDIA TABLET //
+                        @include for-size(tablet) {
+                            height: 100vh;
+                            transition: height 0.5s ease-in;
+                        }
+                    }
+                    ul {
+                        position: absolute;
+                        width: 174px;
+                        padding: 20px 0 20px 0;
+                        margin: 190px 0 0 -50px;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        justify-content: center;
+                        // UI //
+                        background-color: #ffffff;
+                        box-shadow: 0px 0px 8px #00000029;
+                        border-radius: 5px;
+                        // MEDIA IF-DESKTOP //
+                        @include for-size(if-desktop) {
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: visibility 0.4s, opacity 0.4s linear;
+                        }
+                        // MEDIA TABLET //
+                        @include for-size(tablet) {
+                            position: fixed;
+                            width: 100%;
+                            height: 0;
+                            overflow: hidden;
+                            padding: 0;
+                            margin: 0;
+                            top: 0;
+                            left: 0;
+                            z-index: 1;
+                            transition: height 0.5s ease-in;
+                            // UI //
+                            background-color: #f1f1f1;
+                        }
+                        .close-mobile {
+                            position: absolute;
+                            width: 100%;
+                            padding: 20px;
+                            top: 0;
+                            z-index: 1;
+                            // UI //
+                            background-color: #cccccc;
+                            // UI FONT //
+                            @include typography-2;
+                            color: #999999;
+                            text-align: center;
+                            // MEDIA IF-DESKTOP //
+                            @include for-size(if-desktop) {
+                                display: none;
+                            }
+                        }
+                        .up {
+                            width: 8px;
+                            height: 8px;
+                            position: absolute;
+                            top: -5px;
+                            right: 30px;
+                            transform: rotate(45deg);
+                            // UI //
+                            border-top: 1px solid #00000015;
+                            border-left: 1px solid #00000015;
+                            background-color: #ffffff;
+                        }
+                        li {
+                            padding: 10px;
+                            // UI FONT //
+                            @include typography-2;
+                            color: #000000;
+                            font-size: 0.938em;
+                            &:hover {
+                                // MEDIA IF-DESKTOP //
+                                @include for-size(if-desktop) {
+                                    // UI FONT //
+                                    @include typography-3;
+                                }
+                            }
+                        }
+                    }
+                }
+                // CART //
+                .cart {
+                    width: 28px;
+                    height: 28px;
+                    margin-top: 15px;
+                    // UI //
+                    background: url(/assets/img/cart-bag.png);
+                    background-repeat: no-repeat;
+                    .amount-items {
+                        width: 25px;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-left: 12px;
+                        margin-top: 10px;
+                        // UI //
+                        background-color: #000000;
+                        border-radius: 50%;
+                        // UI FONT //
+                        @include typography-1;
+                        color: #ffffff;
+                        font-size: 0.625em;
+                        // MEDIA BIG-DESKTOP //
+                        @include for-size(big-mobile) {
+                            right: -10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
