@@ -4,6 +4,8 @@ Moovin-Challenge
 
 Header Responsivo.
 
+GULP + HTML5 + CSS3 + SASS + JAVASCRIPT ES6 + RESPONSIVE
+
 1. No diretório do projeto, execute `npm install`
 
 2. Se você instalou o Gulp globalmente, você pode executar `gulp default`
