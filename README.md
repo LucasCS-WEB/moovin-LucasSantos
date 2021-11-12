@@ -12,6 +12,8 @@ Header Responsivo.
 
 - Hospedei a aplicação no GitHub Pages para facilitar o acesso => https://lucascs-web.github.io/Moovin-LucasSantos/index.html
 
+- 100% FlexBox, 0% float :D
+
 - 320px => https://i.imgur.com/qV4mK8k.jpg
 
 - 375px => https://i.imgur.com/hh0IISn.jpg
@@ -23,7 +25,5 @@ Header Responsivo.
 - 1024px => https://i.imgur.com/sNQMAnT.jpg
 
 - 1440px => https://i.imgur.com/X0pnKzJ.jpg
-
-- 100% FlexBox, 0% float :D
 
 Woo!
