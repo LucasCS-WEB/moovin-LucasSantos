@@ -16,14 +16,15 @@
                     closeUlQuicklinkTopMobile = document.getElementById("close-ul-quicklink-top-mobile"),
                     ulQuicklinkTopMobile = document.getElementById("ul-quicklink-top-mobile");
 
-                hamburguerMenu.addEventListener("click", (() => {
-                    hamburguerMenu.classList.toggle("active"), setTimeout((() => {
-                        ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile")
-                    }), 500)
-                })), closeUlQuicklinkTopMobile.addEventListener("click", (() => {
+                hamburguerMenu.addEventListener("click", () => {
                     hamburguerMenu.classList.toggle("active"),
-                        ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile")
-                }))
+                        setTimeout(() => {
+                            ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile");
+                        }, 500);
+                }), closeUlQuicklinkTopMobile.addEventListener("click", () => {
+                    hamburguerMenu.classList.toggle("active"),
+                        ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile");
+                });
 
             },
 
@@ -34,11 +35,11 @@
                     closeUlUserAccountMobile = document.getElementById("close-ul-user-account-mobile"),
                     ulUserAccountMobile = document.getElementById("ul-user-account-mobile");
 
-                openUlUserAccountMobile.addEventListener("click", (() => {
-                    ulUserAccountMobile.classList.toggle("ul-user-account-mobile")
-                })), closeUlUserAccountMobile.addEventListener("click", (() => {
-                    ulUserAccountMobile.classList.toggle("ul-user-account-mobile")
-                }))
+                openUlUserAccountMobile.addEventListener("click", () => {
+                    ulUserAccountMobile.classList.toggle("ul-user-account-mobile");
+                }), closeUlUserAccountMobile.addEventListener("click", () => {
+                    ulUserAccountMobile.classList.toggle("ul-user-account-mobile");
+                });
 
             },
 
