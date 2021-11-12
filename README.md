@@ -8,7 +8,7 @@ Header Responsivo.
 
 2. Se você instalou o Gulp globalmente, você pode executar `gulp default`
 
-3. Após o `gulp default` abrira o webserver automaticamente no navegador, podendo ser criado/modificado os arquivos html, sass e js, compilando automaticamente com livereload.
+3. Após o `gulp default` abrira o webserver automaticamente no navegador, podendo ser criado/modificado os arquivos html, sass e javascript, compilando automaticamente com livereload.
 
 - Hospedei a aplicação no GitHub Pages para facilitar o acesso => https://lucascs-web.github.io/Moovin-LucasSantos/index.html
 
