@@ -14,7 +14,7 @@ GULP + HTML5 + CSS3 + SASS + JAVASCRIPT ES6 + RESPONSIVE
 
 - Hospedei a aplicação no GitHub Pages para facilitar o acesso => https://lucascs-web.github.io/Moovin-LucasSantos/index.html
 
-- 100% FlexBox, 0% float :D
+- 100% FlexBox.
 
 - 320px => https://i.imgur.com/qV4mK8k.jpg
 
