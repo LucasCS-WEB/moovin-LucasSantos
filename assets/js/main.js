@@ -19,11 +19,11 @@
                 hamburguerMenu.addEventListener("click", (() => {
                     hamburguerMenu.classList.toggle("active"),
                         setTimeout((() => {
-                            ulQuicklinkTopMobile.classList.add("ul-quicklink-top-mobile")
+                            ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile")
                         }), 500)
                 })), closeUlQuicklinkTopMobile.addEventListener("click", (() => {
                     hamburguerMenu.classList.toggle("active"),
-                        ulQuicklinkTopMobile.classList.remove("ul-quicklink-top-mobile")
+                        ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile")
                 }))
 
             },
@@ -36,9 +36,9 @@
                     ulUserAccountMobile = document.getElementById("ul-user-account-mobile");
 
                 openUlUserAccountMobile.addEventListener("click", (() => {
-                    ulUserAccountMobile.classList.add("ul-user-account-mobile")
+                    ulUserAccountMobile.classList.toggle("ul-user-account-mobile")
                 })), closeUlUserAccountMobile.addEventListener("click", (() => {
-                    ulUserAccountMobile.classList.remove("ul-user-account-mobile")
+                    ulUserAccountMobile.classList.toggle("ul-user-account-mobile")
                 }))
 
             },
