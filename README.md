@@ -16,7 +16,7 @@ GULP + HTML5 + CSS3 + SASS + JAVASCRIPT ES6 + RESPONSIVE
 
 - 100% FlexBox.
 
-- Prefixo dos navegadores são inseridos nas classes css pelo gulp ao compilar.
+- Prefixo dos navegadores são inseridos nas classes css pelo gulp automaticamente ao compilar.
 
 - 320px => https://i.imgur.com/qV4mK8k.jpg
 
