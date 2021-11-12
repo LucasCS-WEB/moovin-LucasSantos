@@ -38,7 +38,7 @@
 
             },
             ////////////////////
-            // INIT FUNCTIONS //
+            // INIT FUNCTIONS //a
             ////////////////////
             init: function() {
                 this.openQuicklinkTopMobile(),
