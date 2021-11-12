@@ -1,10 +1,14 @@
 ! function() {
+
     "use strict";
+
     ({
+
         //////////////////////
         // CREATE FUNCTIONS //
         //////////////////////
         methods: {
+
             // OPEN MENU MOBILE - QUICKLINK HEADER //
             openQuicklinkTopMobile: function() {
 
@@ -23,6 +27,7 @@
                 }))
 
             },
+
             // OPEN USER ACCOUNT MOBILE - HEADER //
             openUserAccountMobile: function() {
 
@@ -37,16 +42,21 @@
                 }))
 
             },
+
             ////////////////////
-            // INIT FUNCTIONS //a
+            // INIT FUNCTIONS //
             ////////////////////
             init: function() {
                 this.openQuicklinkTopMobile(),
                     this.openUserAccountMobile()
             }
+
         },
+
         mounted: function() {
             return this.methods.init()
         }
+
     }).mounted()
+
 }();
