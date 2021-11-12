@@ -6,7 +6,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const rename = require("gulp-rename");
-const uglify = require('gulp-uglify-es').default;
+const uglify = require('gulp-uglify');
+//const uglify = require('gulp-uglify-es').default;
 const browsersync = require('browser-sync').create();
 
 // SASS //

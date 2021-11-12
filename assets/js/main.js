@@ -9,8 +9,8 @@
             openQuicklinkTopMobile: function() {
 
                 const hamburguerMenu = document.getElementById("hamburguer-menu"),
-                    const closeUlQuicklinkTopMobile = document.getElementById("close-ul-quicklink-top-mobile"),
-                        const ulQuicklinkTopMobile = document.getElementById("ul-quicklink-top-mobile");
+                    closeUlQuicklinkTopMobile = document.getElementById("close-ul-quicklink-top-mobile"),
+                    ulQuicklinkTopMobile = document.getElementById("ul-quicklink-top-mobile");
 
                 hamburguerMenu.addEventListener("click", (() => {
                         hamburguerMenu.classList.toggle("active"),
@@ -29,15 +29,15 @@
             openUserAccountMobile: function() {
 
                 const openUlUserAccountMobile = document.getElementById("open-ul-user-account-mobile"),
-                    const closeUlUserAccountMobile = document.getElementById("close-ul-user-account-mobile"),
-                        const ulUserAccountMobile = document.getElementById("ul-user-account-mobile");
+                    closeUlUserAccountMobile = document.getElementById("close-ul-user-account-mobile"),
+                    ulUserAccountMobile = document.getElementById("ul-user-account-mobile");
 
                 openUlUserAccountMobile.addEventListener("click", (() => {
                         ulUserAccountMobile.classList.add("ul-user-account-mobile")
                     })),
 
                     closeUlUserAccountMobile.addEventListener("click", (() => {
-                        ulUserAccountMobile.ulUserAccountMobile.remove("ul-user-account-mobile")
+                        ulUserAccountMobile.classList.remove("ul-user-account-mobile")
                     }))
 
             },
@@ -46,7 +46,8 @@
             // INIT FUNCTIONS //
             ////////////////////
             init: function() {
-                this.openQuicklinkTopMobile(), this.openUserAccountMobile()
+                this.openQuicklinkTopMobile(),
+                    this.openUserAccountMobile()
             }
         },
         mounted: function() {
