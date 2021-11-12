@@ -9,23 +9,7 @@
         //////////////////////
         methods: {
 
-            // OPEN MENU MOBILE - QUICKLINK HEADER //
-            openQuicklinkTopMobile: function() {
 
-                const hamburguerMenu = document.getElementById("hamburguer-menu"),
-                    closeUlQuicklinkTopMobile = document.getElementById("close-ul-quicklink-top-mobile"),
-                    ulQuicklinkTopMobile = document.getElementById("ul-quicklink-top-mobile");
-
-                hamburguerMenu.addEventListener("click", (() => {
-                    hamburguerMenu.classList.toggle("active"), setTimeout((() => {
-                        ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile")
-                    }), 500)
-                })), closeUlQuicklinkTopMobile.addEventListener("click", (() => {
-                    hamburguerMenu.classList.toggle("active"),
-                        ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile")
-                }))
-
-            },
 
             // OPEN USER ACCOUNT MOBILE - HEADER //
             openUserAccountMobile: function() {
