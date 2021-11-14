@@ -9,7 +9,7 @@
         //////////////////////
         methods: {
 
-            // OPEN MENU MOBILE - QUICKLINK HEADER //
+            // OPEN NAV MOBILE - QUICKLINK HEADER //
             openQuicklinkTopMobile: function() {
 
                 const hamburguerMenu = document.getElementById("hamburguer-menu"),
@@ -28,7 +28,7 @@
 
             },
 
-            // OPEN USER ACCOUNT MOBILE - HEADER //
+            // OPEN NAV USER ACCOUNT MOBILE - HEADER //
             openUserAccountMobile: function() {
 
                 const openUlUserAccountMobile = document.getElementById("open-ul-user-account-mobile"),
