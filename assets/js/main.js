@@ -1,4 +1,4 @@
-class MoovinMain {
+class Moovin_Main {
     //////////////////////
     // CREATE FUNCTIONS //
     //////////////////////
@@ -50,5 +50,5 @@ class MoovinMain {
     }
 }
 
-init = new MoovinMain();
+init = new Moovin_Main();
 init.mounted();
