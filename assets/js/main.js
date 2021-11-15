@@ -1,7 +1,9 @@
+'use strict';
+
 class Moovin_Main {
-    //////////////////////
-    // CREATE FUNCTIONS //
-    //////////////////////
+    ////////////////////////
+    // CREATE - FUNCTIONS //
+    ////////////////////////
 
     // OPEN NAV MOBILE - QUICKLINK HEADER //
     openQuicklinkTopMobile() {
@@ -37,18 +39,15 @@ class Moovin_Main {
 
     }
 
-    init() {
-        ////////////////////
-        // INIT FUNCTIONS //
-        ////////////////////
+    //////////////////////////
+    //  MOUNT  - FUNCTIONS  //
+    //////////////////////////
+    mounted() {
         this.openQuicklinkTopMobile(),
             this.openUserAccountMobile()
     }
-
-    mounted() {
-        this.init();
-    }
 }
 
-const init = new Moovin_Main();
-init.mounted();
+const Export = new Moovin_Main();
+
+Export.mounted();
