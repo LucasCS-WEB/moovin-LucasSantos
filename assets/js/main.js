@@ -1,62 +1,54 @@
-! function() {
+class MoovinMain {
+    //////////////////////
+    // CREATE FUNCTIONS //
+    //////////////////////
 
-    "use strict";
+    // OPEN NAV MOBILE - QUICKLINK HEADER //
+    openQuicklinkTopMobile() {
 
-    ({
+        const hamburguerMenu = document.getElementById("hamburguer-menu"),
+            closeUlQuicklinkTopMobile = document.getElementById("close-ul-quicklink-top-mobile"),
+            ulQuicklinkTopMobile = document.getElementById("ul-quicklink-top-mobile");
 
-        //////////////////////
-        // CREATE FUNCTIONS //
-        //////////////////////
-        methods: {
+        hamburguerMenu.addEventListener("click", () => {
+            hamburguerMenu.classList.toggle("active"),
+                setTimeout(() => {
+                    ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile");
+                }, 500);
+        }), closeUlQuicklinkTopMobile.addEventListener("click", () => {
+            hamburguerMenu.classList.toggle("active"),
+                ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile");
+        });
 
-            // OPEN NAV MOBILE - QUICKLINK HEADER //
-            openQuicklinkTopMobile: function() {
+    }
 
-                const hamburguerMenu = document.getElementById("hamburguer-menu"),
-                    closeUlQuicklinkTopMobile = document.getElementById("close-ul-quicklink-top-mobile"),
-                    ulQuicklinkTopMobile = document.getElementById("ul-quicklink-top-mobile");
+    // OPEN NAV USER ACCOUNT MOBILE - HEADER //
+    openUserAccountMobile() {
 
-                hamburguerMenu.addEventListener("click", () => {
-                    hamburguerMenu.classList.toggle("active"),
-                        setTimeout(() => {
-                            ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile");
-                        }, 500);
-                }), closeUlQuicklinkTopMobile.addEventListener("click", () => {
-                    hamburguerMenu.classList.toggle("active"),
-                        ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile");
-                });
+        const openUlUserAccountMobile = document.getElementById("open-ul-user-account-mobile"),
+            closeUlUserAccountMobile = document.getElementById("close-ul-user-account-mobile"),
+            ulUserAccountMobile = document.getElementById("ul-user-account-mobile");
 
-            },
+        openUlUserAccountMobile.addEventListener("click", () => {
+            ulUserAccountMobile.classList.toggle("ul-user-account-mobile");
+        }), closeUlUserAccountMobile.addEventListener("click", () => {
+            ulUserAccountMobile.classList.toggle("ul-user-account-mobile");
+        });
 
-            // OPEN NAV USER ACCOUNT MOBILE - HEADER //
-            openUserAccountMobile: function() {
+    }
 
-                const openUlUserAccountMobile = document.getElementById("open-ul-user-account-mobile"),
-                    closeUlUserAccountMobile = document.getElementById("close-ul-user-account-mobile"),
-                    ulUserAccountMobile = document.getElementById("ul-user-account-mobile");
+    init() {
+        ////////////////////
+        // INIT FUNCTIONS //
+        ////////////////////
+        this.openQuicklinkTopMobile(),
+            this.openUserAccountMobile()
+    }
 
-                openUlUserAccountMobile.addEventListener("click", () => {
-                    ulUserAccountMobile.classList.toggle("ul-user-account-mobile");
-                }), closeUlUserAccountMobile.addEventListener("click", () => {
-                    ulUserAccountMobile.classList.toggle("ul-user-account-mobile");
-                });
+    mounted() {
+        this.init();
+    }
+}
 
-            },
-
-            ////////////////////
-            // INIT FUNCTIONS //
-            ////////////////////
-            init: function() {
-                this.openQuicklinkTopMobile(),
-                    this.openUserAccountMobile()
-            }
-
-        },
-
-        mounted: function() {
-            return this.methods.init()
-        }
-
-    }).mounted()
-
-}();
+init = new MoovinMain();
+init.mounted();
