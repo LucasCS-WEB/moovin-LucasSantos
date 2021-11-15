@@ -50,5 +50,5 @@ class Moovin_Main {
     }
 }
 
-init = new Moovin_Main();
+const init = new Moovin_Main();
 init.mounted();
