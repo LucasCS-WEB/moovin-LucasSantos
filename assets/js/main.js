@@ -40,9 +40,9 @@ class Moovin_Main {
     }
 
     //////////////////////////
-    //  MOUNT  - FUNCTIONS  //
+    //  INIT  - FUNCTIONS  //
     //////////////////////////
-    mounted() {
+    init() {
         this.openQuicklinkTopMobile(),
             this.openUserAccountMobile()
     }
@@ -50,4 +50,4 @@ class Moovin_Main {
 
 const Export = new Moovin_Main();
 
-Export.mounted();
+Export.init();
