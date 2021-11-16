@@ -48,8 +48,8 @@ class OpenCloseNavUserAccountHeaderMobile {
 ///////////////////////////////
 // PASSING SUBJECTS OBSERVER //
 ///////////////////////////////
-
 const init = () => {
+
     // OPEN/CLOSE NAV QUICKLINK HEADER MOBILE - (actionOpenClose, delaySetTimeOut) //
     new OpenCloseNavQuicklinkHeaderMobile("hamburguer-menu", 500).return();
     new OpenCloseNavQuicklinkHeaderMobile("close-ul-quicklink-top-mobile", 0).return();
@@ -57,8 +57,11 @@ const init = () => {
     // OPEN/CLOSE NAV USER ACCOUNT HEADER MOBILE - (actionOpenClose) //
     new OpenCloseNavUserAccountHeaderMobile("open-ul-user-account-mobile").return();
     new OpenCloseNavUserAccountHeaderMobile("close-ul-user-account-mobile").return();
-}
+
+};
 
 document.addEventListener("DOMContentLoaded", () => {
+
     init();
+
 });
