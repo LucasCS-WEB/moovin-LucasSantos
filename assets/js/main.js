@@ -1,5 +1,9 @@
 'use strict';
 
+//////////////////////////////
+//        OBSERVERS         //
+//////////////////////////////
+
 // OPEN/CLOSE NAV QUICKLINK HEADER MOBILE //
 class OpenCloseNavQuicklinkHeaderMobile {
 
@@ -45,9 +49,10 @@ class OpenCloseNavUserAccountHeaderMobile {
 
 };
 
-///////////////////////////////
-// PASSING SUBJECTS OBSERVER //
-///////////////////////////////
+////////////////////////////////
+//         SUBJECTS           //
+////////////////////////////////
+
 const init = () => {
 
     // OPEN/CLOSE NAV QUICKLINK HEADER MOBILE - (actionOpenClose, delaySetTimeOut) //
