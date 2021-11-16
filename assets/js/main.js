@@ -45,22 +45,15 @@ class OpenCloseNavUserAccountHeaderMobile {
 
 };
 
-// SET FUNCTIONS //
-class set {
-    init() {
+// PASSING SUBJECTS OBSERVER //
+const init = () => {
+    // OPEN/CLOSE NAV QUICKLINK HEADER MOBILE - (actionOpenClose, delaySetTimeOut) //
+    new OpenCloseNavQuicklinkHeaderMobile("hamburguer-menu", 500).return();
+    new OpenCloseNavQuicklinkHeaderMobile("close-ul-quicklink-top-mobile", 0).return();
 
-        // OPEN/CLOSE NAV QUICKLINK HEADER MOBILE //
-        new OpenCloseNavQuicklinkHeaderMobile("hamburguer-menu", 500).return();
-        new OpenCloseNavQuicklinkHeaderMobile("close-ul-quicklink-top-mobile").return();
+    // OPEN/CLOSE NAV USER ACCOUNT HEADER MOBILE - (actionOpenClose) //
+    new OpenCloseNavUserAccountHeaderMobile("open-ul-user-account-mobile").return();
+    new OpenCloseNavUserAccountHeaderMobile("close-ul-user-account-mobile").return();
+}
 
-        // OPEN/CLOSE NAV USER ACCOUNT HEADER MOBILE //
-        new OpenCloseNavUserAccountHeaderMobile("open-ul-user-account-mobile").return();
-        new OpenCloseNavUserAccountHeaderMobile("close-ul-user-account-mobile").return();
-
-    };
-};
-
-// INIT FUNCTIONS //
-document.addEventListener("DOMContentLoaded", () => {
-    new set().init();
-});
+init();
