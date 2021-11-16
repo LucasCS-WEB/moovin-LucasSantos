@@ -1,53 +1,66 @@
 'use strict';
 
-class Moovin_Main {
-    ////////////////////////
-    // CREATE - FUNCTIONS //
-    ////////////////////////
+// OPEN/CLOSE NAV QUICKLINK HEADER MOBILE //
+class OpenCloseNavQuicklinkHeaderMobile {
 
-    // OPEN NAV MOBILE - QUICKLINK HEADER //
-    openQuicklinkTopMobile() {
+    constructor(actionOpenClose, delaySetTimeOut) {
 
-        const hamburguerMenu = document.getElementById("hamburguer-menu"),
-            closeUlQuicklinkTopMobile = document.getElementById("close-ul-quicklink-top-mobile"),
-            ulQuicklinkTopMobile = document.getElementById("ul-quicklink-top-mobile");
+        this.actinOpenCloseQuicklinkTopMobile = document.getElementById(actionOpenClose);
+        this.delaySetTimeOut = delaySetTimeOut;
+        this.hamburguerMenu = document.getElementById("hamburguer-menu");
+        this.ulQuicklinkTopMobile = document.getElementById("ul-quicklink-top-mobile");
 
-        hamburguerMenu.addEventListener("click", () => {
-            hamburguerMenu.classList.toggle("active"),
-                setTimeout(() => {
-                    ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile");
-                }, 500);
-        }), closeUlQuicklinkTopMobile.addEventListener("click", () => {
-            hamburguerMenu.classList.toggle("active"),
-                ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile");
+    };
+
+    return () {
+
+        this.actinOpenCloseQuicklinkTopMobile.addEventListener("click", () => {
+            this.hamburguerMenu.classList.toggle("active");
+            setTimeout(() => {
+                this.ulQuicklinkTopMobile.classList.toggle("ul-quicklink-top-mobile");
+            }, this.delaySetTimeOut);
         });
 
-    }
+    };
 
-    // OPEN NAV USER ACCOUNT MOBILE - HEADER //
-    openUserAccountMobile() {
+};
 
-        const openUlUserAccountMobile = document.getElementById("open-ul-user-account-mobile"),
-            closeUlUserAccountMobile = document.getElementById("close-ul-user-account-mobile"),
-            ulUserAccountMobile = document.getElementById("ul-user-account-mobile");
+// OPEN/CLOSE NAV USER ACCOUNT HEADER MOBILE //
+class OpenCloseNavUserAccountHeaderMobile {
 
-        openUlUserAccountMobile.addEventListener("click", () => {
-            ulUserAccountMobile.classList.toggle("ul-user-account-mobile");
-        }), closeUlUserAccountMobile.addEventListener("click", () => {
-            ulUserAccountMobile.classList.toggle("ul-user-account-mobile");
+    constructor(actionOpenClose) {
+
+        this.openCloseUlUserAccountMobile = document.getElementById(actionOpenClose);
+        this.ulUserAccountMobile = document.getElementById("ul-user-account-mobile");
+
+    };
+
+    return () {
+
+        this.openCloseUlUserAccountMobile.addEventListener("click", () => {
+            this.ulUserAccountMobile.classList.toggle("ul-user-account-mobile");
         });
 
-    }
+    };
 
-    //////////////////////////
-    //  INIT  - FUNCTIONS  //
-    //////////////////////////
+};
+
+// SET FUNCTIONS //
+class set {
     init() {
-        this.openQuicklinkTopMobile(),
-            this.openUserAccountMobile()
-    }
-}
 
-const Export = new Moovin_Main();
+        // OPEN/CLOSE NAV QUICKLINK HEADER MOBILE //
+        new OpenCloseNavQuicklinkHeaderMobile("hamburguer-menu", 500).return();
+        new OpenCloseNavQuicklinkHeaderMobile("close-ul-quicklink-top-mobile").return();
 
-Export.init();
+        // OPEN/CLOSE NAV USER ACCOUNT HEADER MOBILE //
+        new OpenCloseNavUserAccountHeaderMobile("open-ul-user-account-mobile").return();
+        new OpenCloseNavUserAccountHeaderMobile("close-ul-user-account-mobile").return();
+
+    };
+};
+
+// INIT FUNCTIONS //
+document.addEventListener("DOMContentLoaded", () => {
+    new set().init();
+});
