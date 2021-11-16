@@ -7,7 +7,8 @@ const { src, dest, watch, series } = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     rename = require("gulp-rename"),
     uglify = require('gulp-uglify-es').default,
-    browsersync = require('browser-sync').create();
+    browsersync = require('browser-sync').create(),
+    babel = require('gulp-babel');
 
 // SASS //
 function task_sass() {
@@ -25,6 +26,9 @@ function task_sass() {
 function task_js() {
     return src('assets/js/*.js')
         .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['@babel/preset-env']
+        }))
         .pipe(uglify())
         .pipe(sourcemaps.write('./maps'))
         .pipe(rename({ suffix: ".min" }))
